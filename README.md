@@ -1,73 +1,113 @@
-# 📌 API de Gerenciamento de Tarefas
+# 📌 Sistema de Gerenciamento de Tarefas
 
 ## Descrição
 
-API REST desenvolvida com Flask para gerenciamento de tarefas, permitindo criar, listar, atualizar e remover tarefas.
+Aplicação completa de gerenciamento de tarefas composta por:
 
-O projeto inclui:
+* **Backend (API REST)** desenvolvido com Flask
+* **Frontend** em HTML, CSS e JavaScript
 
-* Operações completas de CRUD
-* Persistência de dados em arquivo JSON
-* Uso de identificadores únicos (ID)
-* Validação de dados e tratamento de erros
+O sistema permite criar, listar, concluir e remover tarefas, com persistência de dados em JSON e uso de identificadores únicos (ID).
 
 ---
 
 ## Tecnologias utilizadas
 
+### Backend:
+
 * Python
 * Flask
 * JSON
+
+### Frontend:
+
+* HTML
+* CSS
+* JavaScript
+
+---
+
+## Estrutura do projeto
+
+```
+seu-projeto/
+│
+├── api/
+│   ├── app.py
+│   └── tarefas.json (ignorado pelo Git)
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## Como executar o projeto
 
-1. Clone o repositório:
+### Backend (API)
 
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+1. Acesse a pasta:
+
+```
+cd api
 ```
 
-2. Acesse a pasta do projeto:
+2. Instale as dependências:
 
-```bash
-cd seu-repositorio
 ```
-
-3. Instale as dependências:
-
-```bash
 pip install flask
 ```
 
-4. Execute a aplicação:
+3. Execute a API:
 
-```bash
+```
 python app.py
 ```
 
-5. Acesse no navegador:
+A API estará disponível em:
 
 ```
-http://127.0.0.1:5000/tarefas
+http://127.0.0.1:5000
 ```
+
+---
+
+### Frontend
+
+1. Acesse a pasta:
+
+```
+cd frontend
+```
+
+2. Abra o arquivo:
+
+```
+index.html
+```
+
+Ou utilize uma extensão como Live Server no VS Code.
 
 ---
 
 ## 🔗 Endpoints da API
 
-### Listar todas as tarefas
+### Listar tarefas
 
 GET /tarefas
 
 ---
 
-### Criar nova tarefa
+### Criar tarefa
 
 POST /tarefas
 
-Exemplo de requisição:
+Exemplo:
 
 ```json
 {
@@ -75,19 +115,9 @@ Exemplo de requisição:
 }
 ```
 
-Resposta:
-
-```json
-{
-  "id": 1,
-  "nome": "Estudar Flask",
-  "concluida": false
-}
-```
-
 ---
 
-### Marcar tarefa como concluída
+### Marcar como concluída
 
 PUT /tarefas/{id}
 
@@ -99,32 +129,24 @@ DELETE /tarefas/{id}
 
 ---
 
-## Estrutura do projeto
-
-```bash
-app.py
-tarefas.json
-```
-
----
-
 ## Aprendizados
 
-* Criação de APIs REST com Flask
+* Desenvolvimento de API REST com Flask
+* Integração entre frontend e backend
 * Manipulação de dados em JSON
-* Implementação de operações CRUD
-* Uso de identificadores únicos (ID)
-* Tratamento de erros e validação de entrada
+* Estruturação de projetos em camadas
+* Boas práticas com Git e GitHub
 
 ---
 
-## Melhorias futuras
+## 📌 Melhorias futuras
 
 * Integração com banco de dados (SQLite)
-* Autenticação de usuários
-* Organização em múltiplos arquivos (estrutura modular)
+* Sistema de autenticação de usuários
+* Interface mais interativa
 
 ---
 
 ## Autora
+
 Giulia Antunes de Oliveira
